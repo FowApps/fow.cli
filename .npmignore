@@ -1,0 +1,8 @@
+.github/
+.husky/
+.vscode/
+coverage/
+demo/
+docs/
+e2e/
+webpack/
