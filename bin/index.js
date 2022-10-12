@@ -68,6 +68,7 @@ const options = yargs
       fs.mkdirSync(path.join(folderPath, 'functions'));
       fs.mkdirSync(path.join(folderPath, 'models'));
       fs.mkdirSync(path.join(folderPath, 'configurations'));
+      fs.mkdirSync(path.join(folderPath, 'events'));
 
       if (config.extension && config.extension.components) {
 
@@ -99,6 +100,11 @@ const options = yargs
         fs.writeFileSync(path.join(folderPath, 'configurations', 'manifest.json'), JSON.stringify({ content: config.extension.configuration }));
       }
 
+      if (config.extension && config.extension.events) {
+
+        fs.writeFileSync(path.join(folderPath, 'events', 'manifest.json'), JSON.stringify({ contents: config.extension.events }));
+      }
+      
       var zipFile = Math.floor(Date.now() / 1000).toString();
       var zipPath = path.join('./fow-packages', zipFile + '.zip')
       zip.zip(folderPath, zipPath).then(() => {
