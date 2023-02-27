@@ -14,7 +14,7 @@
   "dependencies": {
     "random-key": "^0.3.2",
     "simple-git": "^3.15.1",
-    "yargs": "^17.6.2",
+    "yargs": "^17.7.1",
     "zip-a-folder": "^1.1.5"
   }
 }
